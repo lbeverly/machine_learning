@@ -1,0 +1,14 @@
+# i.) https://www.kaggle.com/xainano/handwrittenmathsymbols
+
+# imagemagick convert can be used to convert to a different file format.
+
+mkdir output; for img in *.jpg; do filename=${img%.*} ;  
+convert "$img" "/output/$filename.png"; done
+
+# be in the directory with the original files to begin
+
+# if you already made an output directory:
+
+for img in *.jpg; do filename=${img%.*} ; convert "$img" "/output/$filename.png"; done
+
+# For more information on imagemagick: https://www.imagemagick.org/script/index.php
